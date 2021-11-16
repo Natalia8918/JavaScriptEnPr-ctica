@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h2>
+                Resultado: <span class="resultado"></span>
+            </h2>
+            <div>
+                <div>
+                    <div>
+                        <label for="">Valor 1</label>
+                        <input id="valor1" type="text">
+                    </div>
+                    <div>
+                        <label for="">Valor 2</label>
+                        <input id="valor2" type="text">
+                    </div>
+                    <div style="display: flex">
+                        <button id="btn-sumar" type="button">
+                            Sumar
+                        </button>
+                        <button id="btn-restar" type="button">
+                            Restar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // se muestra el resultado
+    let resultado = document.querySelector('.resultado');
+
+    //boton suma y resta
+let buttonSumar = document.getElementById('btn-sumar');
+let buttonRestar = document.getElementById('btn-restar');
+
+// se llaman los valores
+function settingValor1() {
+    let valor1 = parseInt(document.getElementById('valor1').value);
+    return valor1;
+}
+function settingValor2() {
+    let valor2 = parseInt(document.getElementById('valor2').value);
+    return valor2;
+}
+
+// suma de ambos numeros
+buttonSumar.addEventListener('click', function(event) {
+    event.preventDefault();
+    let resultadoSuma = (settingValor1() + settingValor2());
+    resultado.innerHTML = resultadoSuma;
+});
+
+// resta ambos numeros
+buttonRestar.addEventListener('click', function(event) {
+    event.preventDefault();
+    let resultadoResta = (settingValor1() - settingValor2());
+if (resultadoResta > 0) {
+    resultado.innerHTML = resultadoResta;
+}else{
+    resultado.innerHTML = '0 (El resultado es numero negativo)';
+}
+    
+});
+    </script>
+</body>
+
+</html>

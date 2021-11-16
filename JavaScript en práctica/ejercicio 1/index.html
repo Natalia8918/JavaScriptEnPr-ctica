@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Natalia Gonzalez y Roberto Raggio">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <div>
+        <div style="width: 40%;margin: 0 auto">
+            <h2>
+                Escríbenos !!!
+            </h2>
+            <div class="resultado" style="color:green;font-style: italic">
+            </div>
+            <form id="formulario">
+                <div>
+                    <div style="display: flex;flex-direction: column;">
+                        <label>
+                            Nombre completo
+                        </label>
+                        <input id="nombre" class="textNombre" type="text">
+                        <span class="errorNombre" style="color:red;font-style: italic;"></span>
+                    </div>
+                    <div style="display: flex;flex-direction: column;">
+                        <label>
+                            Asunto
+                        </label>
+                        <input id="asunto" class="textAsunto" type="text">
+                        <span class="errorAsunto" style="color:red;font-style: italic;"></span>
+                    </div>
+                </div>
+                <div style="display: flex;flex-direction: column;">
+                    <label>
+                        Mensaje
+                    </label>
+                    <textarea id="mensaje" class="textMensaje" type="text"></textarea>
+                    <span class="errorMensaje" style="color:red;font-style: italic;"></span>
+                </div>
+                <div>
+                    <button id="boton" type="submit">Envíar mensaje</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
